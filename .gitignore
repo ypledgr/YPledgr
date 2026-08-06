@@ -1,0 +1,34 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# build output
+dist/
+build/
+*.tsbuildinfo
+target/
+.anchor/
+test-ledger/
+
+# environment
+.env
+.env.*
+!.env.example
+
+# tooling
+.vercel/
+.turbo/
+coverage/
+.nyc_output/
+
+# editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# keys, never commit these
+*.keypair.json
+keys/
