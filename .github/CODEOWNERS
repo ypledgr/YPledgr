@@ -1,0 +1,7 @@
+# Default owners for everything
+*                     @ypledgr
+
+# The escrow program needs a second pair of eyes
+/programs/escrow/     @ypledgr
+/packages/arbiter/    @ypledgr
+/docs/escrow.md       @ypledgr
