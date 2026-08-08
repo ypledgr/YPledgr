@@ -1,0 +1,20 @@
+{
+  "name": "@pledgr/api",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Pledgr REST API: builds, bonds, proofs, verdicts, appeals and webhooks. In-memory store for devnet and local development.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/server.js",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "test": "vitest run --root ../.. apps/api"
+  },
+  "dependencies": {
+    "@pledgr/arbiter": "0.3.0",
+    "@pledgr/core": "0.3.0",
+    "@pledgr/sdk": "0.3.0"
+  }
+}
