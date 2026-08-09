@@ -1,0 +1,11 @@
+{
+  "company": "Lumen Health",
+  "spec": "Ship the MVP: auth, billing, dashboard. Next.js front end, Postgres, Stripe billing, deployed at https://lumen.health with the test suite in /tests green.",
+  "milestones": [
+    { "id": "mvp-live", "title": "MVP live", "proof": "deploy", "weight": 0.3334, "target": { "url": "https://lumen.health", "p95Ms": 300 } },
+    { "id": "100-paying-users", "title": "100 paying users", "proof": "revenue", "weight": 0.3333, "target": { "payingCustomers": 100 } },
+    { "id": "profitable", "title": "Profitable", "proof": "ledger", "weight": 0.3333, "target": { "profitableMonths": 3 } }
+  ],
+  "escrow": "12000 USDC",
+  "bond": "2400 USDC"
+}
