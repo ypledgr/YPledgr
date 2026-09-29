@@ -289,9 +289,20 @@
   // ---------------------------------------------------------------- cohort marks
   var cohort = $('cohort');
   if (cohort) {
-    var startups = [['Lumen Health', 'LH', '#16a34a'], ['Driftwood', 'DW', '#2563eb'], ['Pine Labs', 'PL', '#0d9488'], ['Orbit', 'OR', '#7c3aed'], ['Hatch', 'HA', '#d97706'], ['Mellow', 'ME', '#db2777'], ['Kite', 'KI', '#0284c7'], ['Sprout', 'SP', '#4f46e5'], ['Nimbus', 'NI', '#ca8a04'], ['Atlas', 'AT', '#111111']];
+    var startups = [
+      ['Lumen Health', '#16a34a', '<path d="M7 17h5l3-7 4 12 3-7h3" fill="none" stroke="C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>'],
+      ['Driftwood', '#2563eb', '<path d="M6 12c3-3 5-3 8 0s5 3 8 0M6 19c3-3 5-3 8 0s5 3 8 0" fill="none" stroke="C" stroke-width="2.2" stroke-linecap="round"/>'],
+      ['Pine Labs', '#0d9488', '<path d="M16 6l6 8h-3.5l5 7H8.5l5-7H10z" fill="C"/><path d="M16 21v5" stroke="C" stroke-width="2.4" stroke-linecap="round"/>'],
+      ['Orbit', '#7c3aed', '<circle cx="16" cy="16" r="8" fill="none" stroke="C" stroke-width="2.2"/><circle cx="23.5" cy="10.5" r="2.6" fill="C"/>'],
+      ['Hatch', '#d97706', '<path d="M16 6c-5 0-8 6-8 11a8 8 0 0 0 16 0c0-5-3-11-8-11z" fill="none" stroke="C" stroke-width="2.2"/><path d="M9 16l3-2 2 3 3-3 2 3 3-2 2 2" fill="none" stroke="C" stroke-width="1.8" stroke-linejoin="round"/>'],
+      ['Mellow', '#db2777', '<path d="M20 7a9 9 0 1 0 5 15.5A8 8 0 0 1 20 7z" fill="C"/>'],
+      ['Kite', '#0284c7', '<path d="M16 5l8 9-8 7-8-7z" fill="C"/><path d="M16 21c-1 3-4 4-6 6" fill="none" stroke="C" stroke-width="2" stroke-linecap="round"/>'],
+      ['Sprout', '#4f46e5', '<path d="M16 26V14" stroke="C" stroke-width="2.4" stroke-linecap="round"/><path d="M16 15c0-5 3-8 8-8 0 5-3 8-8 8zM16 19c0-4-3-6-7-6 0 4 3 6 7 6z" fill="C"/>'],
+      ['Nimbus', '#ca8a04', '<path d="M10 22a4.5 4.5 0 0 1-.5-9 6.5 6.5 0 0 1 12.5-1.5A4.5 4.5 0 0 1 22 22z" fill="C"/>'],
+      ['Atlas', '#111111', '<path d="M5 24l7-11 4 6 3-4 8 9z" fill="C"/><circle cx="23" cy="9" r="2.5" fill="C"/>'],
+    ];
     cohort.innerHTML = startups.map(function (s) {
-      return '<li><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><rect width="32" height="32" rx="8" fill="' + s[2] + '" opacity="0.12"/><rect x="0.5" y="0.5" width="31" height="31" rx="7.5" fill="none" stroke="' + s[2] + '" opacity="0.45"/><text x="16" y="20.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="11.5" font-weight="700" fill="' + s[2] + '">' + s[1] + '</text></svg><span>' + s[0] + '</span></li>';
+      return '<li><svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true"><rect width="32" height="32" rx="8" fill="' + s[1] + '" opacity="0.12"/>' + s[2].split('C').join(s[1]) + '</svg><span>' + s[0] + '</span></li>';
     }).join('');
   }
 
@@ -321,6 +332,19 @@
     var update = function () { mcta.classList.toggle('show', window.scrollY > 700 && !ctaInView); };
     window.addEventListener('scroll', update, { passive: true });
     update();
+  }
+
+  // ---------------------------------------------------------------- film
+  var film = $('film-video'), filmBtn = $('film-sound');
+  if (film && filmBtn) {
+    filmBtn.addEventListener('click', function () {
+      film.muted = !film.muted;
+      filmBtn.classList.toggle('unmuted', !film.muted);
+      filmBtn.setAttribute('aria-label', film.muted ? 'Unmute' : 'Mute');
+      if (film.paused) film.play();
+    });
+    var fio = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { film.play().catch(function () {}); } else { film.pause(); } }, { threshold: 0.25 });
+    fio.observe(film);
   }
 
   // ---------------------------------------------------------------- chrome
