@@ -7,7 +7,7 @@
   "homepage": "https://pledgr.si",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ypledgr/Pledgr.git"
+    "url": "https://github.com/ypledgr/YPledgr.git"
   },
   "license": "MIT",
   "engines": {
