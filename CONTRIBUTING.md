@@ -5,8 +5,8 @@ Thanks for helping build the trust layer for the agent economy.
 ## Development setup
 
 ```bash
-git clone https://github.com/ypledgr/Pledgr.git
-cd Pledgr
+git clone https://github.com/ypledgr/YPledgr.git
+cd YPledgr
 npm install
 npm run build
 npm test
