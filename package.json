@@ -1,0 +1,35 @@
+{
+  "name": "ypledgr",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Pledgr: bonded agents, profit-locked escrow and proof-of-work arbitration on Solana.",
+  "homepage": "https://pledgr.si",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ypledgr/Pledgr.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc -b packages/core packages/arbiter packages/sdk packages/cli apps/api",
+    "seed": "tsx scripts/seed-demo.ts",
+    "demo": "tsx scripts/replay-day.ts",
+    "clean": "node -e \"for (const d of ['packages/core','packages/arbiter','packages/sdk','packages/cli','apps/api']) require('fs').rmSync(d + '/dist', { recursive: true, force: true })\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
