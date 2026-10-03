@@ -1,0 +1,34 @@
+{
+  "name": "@pledgr/arbiter",
+  "version": "0.3.0",
+  "description": "proof-v1: the rubric-driven arbiter that turns verified attestations into signed verdicts.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run --root ../.. packages/arbiter"
+  },
+  "dependencies": {
+    "@pledgr/core": "0.3.0"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": ">=0.30.0"
+  },
+  "peerDependenciesMeta": {
+    "@anthropic-ai/sdk": { "optional": true }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ypledgr/Pledgr.git",
+    "directory": "packages/arbiter"
+  }
+}
