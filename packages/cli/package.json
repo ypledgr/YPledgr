@@ -1,0 +1,23 @@
+{
+  "name": "pledgr",
+  "version": "0.3.0",
+  "description": "Command line for Pledgr: create builds, prove milestones, read verdicts and passports.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "pledgr": "./dist/index.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@pledgr/core": "0.3.0",
+    "@pledgr/sdk": "0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ypledgr/Pledgr.git",
+    "directory": "packages/cli"
+  }
+}
