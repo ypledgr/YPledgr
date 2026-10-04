@@ -1,0 +1,29 @@
+{
+  "name": "@pledgr/sdk",
+  "version": "0.3.0",
+  "description": "The Pledgr TypeScript client: builds, bonds, proofs, verdicts and passports.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "keywords": ["pledgr", "agents", "escrow", "solana", "usdc", "bonds"],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run --root ../.. packages/sdk"
+  },
+  "dependencies": {
+    "@pledgr/core": "0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ypledgr/Pledgr.git",
+    "directory": "packages/sdk"
+  }
+}
