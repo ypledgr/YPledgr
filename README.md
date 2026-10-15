@@ -17,12 +17,17 @@
 <p align="center">
   <a href="https://pledgr.si"><img alt="Site" src="https://img.shields.io/badge/site-pledgr.si-111111?style=flat-square" /></a>
   <a href="https://x.com/Ypledgr"><img alt="X" src="https://img.shields.io/badge/follow-%40Ypledgr-111111?style=flat-square&logo=x&logoColor=white" /></a>
-  <a href="https://github.com/ypledgr/Pledgr/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/ypledgr/Pledgr/ci.yml?branch=main&style=flat-square&label=ci" /></a>
+  <a href="https://github.com/ypledgr/YPledgr/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/ypledgr/YPledgr/ci.yml?branch=main&style=flat-square&label=ci" /></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-16a34a?style=flat-square" /></a>
   <img alt="Solana" src="https://img.shields.io/badge/chain-Solana-9945FF?style=flat-square&logo=solana&logoColor=white" />
   <img alt="Stablecoin" src="https://img.shields.io/badge/escrow-USDC-2775CA?style=flat-square" />
   <img alt="Token" src="https://img.shields.io/badge/token-%24PLEDGR-16a34a?style=flat-square" />
   <img alt="Status" src="https://img.shields.io/badge/status-testnet-d97706?style=flat-square" />
+</p>
+
+<p align="center">
+  <b>$PLEDGR contract address (Solana):</b> <code>CYnfNavW2m976f9JAADhBCHdg1exdffJSxMuR77jpump</code><br />
+  <a href="https://pump.fun/coin/CYnfNavW2m976f9JAADhBCHdg1exdffJSxMuR77jpump">Buy on pump.fun</a>
 </p>
 
 <p align="center">
@@ -249,7 +254,15 @@ pie showData
 
 ## $PLEDGR token
 
-$PLEDGR is the Solana token that secures the network. It is a utility token for bonds, staking, panels and fees. It is not an investment. Contract address will be announced at launch.
+$PLEDGR is the Solana token that secures the network. It is a utility token for bonds, staking, panels and fees. It is not an investment.
+
+| | |
+| --- | --- |
+| Chain | Solana |
+| Contract address | `CYnfNavW2m976f9JAADhBCHdg1exdffJSxMuR77jpump` |
+| Trade | [https://pump.fun/coin/CYnfNavW2m976f9JAADhBCHdg1exdffJSxMuR77jpump](https://pump.fun/coin/CYnfNavW2m976f9JAADhBCHdg1exdffJSxMuR77jpump) |
+
+That is the only $PLEDGR contract address. Anything else claiming the name is not it.
 
 | Use | Mechanism |
 | --- | --- |
@@ -336,8 +349,8 @@ ypledgr/
 ### Install
 
 ```bash
-git clone https://github.com/ypledgr/Pledgr.git
-cd Pledgr
+git clone https://github.com/ypledgr/YPledgr.git
+cd YPledgr
 npm install
 npm run build
 npm test
@@ -438,10 +451,10 @@ gantt
     section Testnet
     Bonds, escrow, proof-v1 on devnet     :done,    t1, 2026-10-01, 2026-12-31
     SDKs in TypeScript and Python         :done,    t2, 2026-11-01, 2026-12-31
+    $PLEDGR launched on pump.fun          :done,    t3, 2026-10-15, 2026-10-16
     section Mainnet
     Independent audit of programs         :active,  m1, 2027-01-01, 2027-02-15
     Cohort 1, twenty funded builds        :         m2, 2027-01-15, 2027-03-31
-    $PLEDGR launch                        :         m3, 2027-02-01, 2027-02-28
     section Network
     Public passports and appeals          :         n1, 2027-04-01, 2027-06-30
     Arbiter marketplace                   :         n2, 2027-07-01, 2027-09-30
@@ -476,7 +489,7 @@ npm run build
 | --- | --- |
 | Site | [pledgr.si](https://pledgr.si) |
 | X | [@Ypledgr](https://x.com/Ypledgr) |
-| GitHub | [github.com/ypledgr/Pledgr](https://github.com/ypledgr/Pledgr) |
+| GitHub | [github.com/ypledgr/YPledgr](https://github.com/ypledgr/YPledgr) |
 | Docs | [`docs/`](docs/) |
 
 ---
